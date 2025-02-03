@@ -133,6 +133,7 @@ void PostingContext::postNext()
                 length = snprintf(
                     buffer,
                     sizeof(buffer),
+                    "%s%09d",
                     d_parameters_p->sequentialMessagePattern().c_str(),
                     d_numMessagesPosted);
                 msg.setDataRef(buffer, length);
